@@ -62,7 +62,12 @@
     box-shadow: 0 1px 3px rgba(20, 25, 50, 0.05);
   }
 
-  table { width: 100%; border-collapse: collapse; font-size: 0.86rem; }
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table { width: 100%; min-width: 980px; border-collapse: collapse; font-size: 0.86rem; }
   thead th {
     background: var(--navy);
     color: #fff;
@@ -108,6 +113,7 @@
   }
 
   @media (max-width: 900px) {
+    table { min-width: 0; }
     table, thead, tbody, th, td, tr { display: block; }
     thead tr { position: absolute; top: -9999px; left: -9999px; }
     tbody tr {
@@ -164,7 +170,16 @@
 <span class="badge contact">En attente / relance</span>
 <span class="badge prospecter">À prospecter</span>
 </div>
+
+<h2>Disponibilités de l'équipe</h2>
+<div class="card avail-panel" style="padding:20px 24px;">
+<p>Cochez, pour chaque festival, les personnes disponibles (Vincent / Florian / Camille) dans le tableau ci-dessous, puis cliquez sur le bouton ci-dessous pour envoyer un récapitulatif par email à l'équipe. Cette page ne sauvegarde rien automatiquement — le bouton ouvre votre client mail avec la liste des disponibilités cochées, prête à envoyer.</p>
+<button id="save-avail-btn" class="save-btn" type="button">💾 Enregistrer les disponibilités</button>
+<div id="save-status" class="save-status"></div>
+</div>
+
 <div class="card">
+<div class="table-scroll">
 <table>
 <thead>
 <tr>
@@ -338,15 +353,11 @@
 </tbody>
 </table>
 </div>
-<h2>Disponibilités de l'équipe</h2>
-<div class="card avail-panel" style="padding:20px 24px;">
-<p>Cochez, pour chaque festival, les personnes disponibles (Vincent / Florian / Camille) dans le tableau ci-dessus, puis cliquez sur le bouton ci-dessous pour envoyer un récapitulatif par email à l'équipe. Cette page ne sauvegarde rien automatiquement — le bouton ouvre votre client mail avec la liste des disponibilités cochées, prête à envoyer.</p>
-<button id="save-avail-btn" class="save-btn" type="button">💾 Enregistrer les disponibilités</button>
-<div id="save-status" class="save-status"></div>
 </div>
 
 <h2>Hors période (pour information)</h2>
 <div class="card">
+<div class="table-scroll">
 <table class="hors-periode">
 <thead>
 <tr><th>Festival</th><th>Lieu</th><th>Raison</th></tr>
@@ -359,6 +370,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 <h2>Notes</h2>
 <ul class="notes">
