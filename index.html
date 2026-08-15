@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Programmation festivals Tape l'étape — Août 2026 → FLIP 2027</title>
 <style>
   :root {
@@ -127,203 +128,298 @@
       margin-bottom: 2px;
     }
     td.festival { font-size: 1rem; }
+    td.avail-cell { display: flex; align-items: center; gap: 8px; }
+    td.avail-cell::before { margin-bottom: 0; }
   }
+
+  th.avail-col { width: 70px; text-align: center; }
+  td.avail-cell { text-align: center; }
+  .avail-check { display: inline-flex; cursor: pointer; }
+  .avail-check input[type="checkbox"] {
+    width: 19px; height: 19px; cursor: pointer; accent-color: var(--navy);
+  }
+
+  .avail-panel p {
+    margin: 0 0 14px; font-size: 0.9rem; color: #3a3f52; max-width: 780px;
+  }
+  .save-btn {
+    background: var(--navy); color: #fff; border: none; padding: 10px 20px;
+    border-radius: 8px; font-weight: 600; font-size: 0.88rem; cursor: pointer;
+  }
+  .save-btn:hover { background: var(--navy-light); }
+  .save-status { margin-top: 12px; font-size: 0.85rem; color: var(--muted); min-height: 1.2em; }
 </style>
 </head>
 <body>
-
 <header>
-  <div class="wrap">
-    <h1>Programmation festivals — Tape l'étape</h1>
-    <p class="sub">Août 2026 → FLIP 2027 · Base Lyon / Mâcon</p>
-    <p class="desc">Objectif : privilégier les festivals de petite et moyenne taille, qui offrent une meilleure conversion en vente directe que le FLIP (très gros festival gratuit sur 12 jours). Sélection recentrée sur la France ; FIJ Cannes, festivals hors France et Festival A L'ASSO 5 (Nain Geaune) retirés.</p>
-  </div>
+<div class="wrap">
+<h1>Programmation festivals — Tape l'étape</h1>
+<p class="sub">Août 2026 → FLIP 2027 · Base Lyon / Mâcon</p>
+<p class="desc">Objectif : privilégier les festivals de petite et moyenne taille, qui offrent une meilleure conversion en vente directe que le FLIP (très gros festival gratuit sur 12 jours). Sélection recentrée sur la France ; FIJ Cannes, festivals hors France et Festival A L'ASSO 5 (Nain Geaune) retirés.</p>
+</div>
 </header>
-
 <main class="wrap">
-
-  <div class="legend">
-    <span class="badge confirme">Confirmé</span>
-    <span class="badge contact">En attente / relance</span>
-    <span class="badge prospecter">À prospecter</span>
-  </div>
-
-  <div class="card">
-    <table>
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Festival</th>
-          <th>Lieu</th>
-          <th>Distance</th>
-          <th>Taille</th>
-          <th>Statut</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Date">Sam. 5 sept. 2026</td>
-          <td data-label="Festival" class="festival">Fête L'Art du Jeu (2e édition)</td>
-          <td data-label="Lieu" class="lieu">Villefranche-sur-Saône (69)</td>
-          <td data-label="Distance" class="distance">~30-45 min</td>
-          <td data-label="Taille">Petite, communauté ludique régionale</td>
-          <td data-label="Statut" class="statut">Invitation reçue (boutique Ludik) — intérêt confirmé en janvier, relance envoyée en juillet, réponse en attente <span class="tag attente">Relance envoyée</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">13-15 sept. 2026 (pro)<br>19-20 sept. 2026 (public)</td>
-          <td data-label="Festival" class="festival">Festival des Jeux de Vichy</td>
-          <td data-label="Lieu" class="lieu">Vichy (03)</td>
-          <td data-label="Distance" class="distance">~2h30-3h</td>
-          <td data-label="Taille">Moyenne-grande (11 000+ visiteurs, 700+ exposants)</td>
-          <td data-label="Statut" class="statut">Stand pro réservé et confirmé (présence les 13-14 sept.) — Prix du Public 2024 avec Tape l'étape <span class="tag confirme">Confirmé</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">Sam. 3 oct. 2026</td>
-          <td data-label="Festival" class="festival">Oyo Game Fest (2e édition)</td>
-          <td data-label="Lieu" class="lieu">Oyonnax (01)</td>
-          <td data-label="Distance" class="distance">~1h</td>
-          <td data-label="Taille">Petite, festival local</td>
-          <td data-label="Statut" class="statut">Invitation reçue, présence confirmée (1-2 personnes) <span class="tag confirme">Confirmé</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">24-25 oct. 2026</td>
-          <td data-label="Festival" class="festival">Festival de Pouilley-les-Vignes (Comt'est, 5e édition)</td>
-          <td data-label="Lieu" class="lieu">Doubs (25)</td>
-          <td data-label="Distance" class="distance">~2h</td>
-          <td data-label="Taille">Petite, gratuit, associatif</td>
-          <td data-label="Statut" class="statut">Demande de donation reçue — pas de vente directe <span class="tag basse">Priorité basse</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">7-8 nov. 2026<br><span style="color:#1f7a45; font-weight:600;">(16e édition, confirmé)</span></td>
-          <td data-label="Festival" class="festival">Fête vos Jeux</td>
-          <td data-label="Lieu" class="lieu">La Roselière, Montbéliard (25)</td>
-          <td data-label="Distance" class="distance">~2h30-3h</td>
-          <td data-label="Taille">Moyenne (~6000 visiteurs, 250 tables, plusieurs dizaines d'éditeurs)</td>
-          <td data-label="Statut" class="statut">Pôle éditeurs : Sébastien Aubert / Rosalie Thomain, contact-editeurs@fete-vos-jeux.fr (conditions/tarifs à demander directement) <span class="tag prospecter">À prospecter</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Fin janv./début fév. 2027<br><span style="color:#8a8fa3">(2026 : 31 janv.-1er fév.)</span></td>
-          <td data-label="Festival" class="festival">Festival du Jeu — À toi de jouer</td>
-          <td data-label="Lieu" class="lieu">Caluire-et-Cuire (69)</td>
-          <td data-label="Distance" class="distance">~10-15 min</td>
-          <td data-label="Taille">Petite, organisée par la ludothèque municipale</td>
-          <td data-label="Statut" class="statut">On peut vendre sur place — pas encore de contact (ville-caluire.fr) <span class="tag prospecter">À prospecter</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Avril 2027<br><span style="color:#8a8fa3">(2026 : week-end 25-26 avril, festival sur une semaine)</span></td>
-          <td data-label="Festival" class="festival">Place aux Jeux (14e édition en 2026)</td>
-          <td data-label="Lieu" class="lieu">Grenoble (38)</td>
-          <td data-label="Distance" class="distance">~1h30</td>
-          <td data-label="Taille">Moyenne</td>
-          <td data-label="Statut" class="statut">Pas encore de contact (placeauxjeux-grenoble.org) <span class="tag prospecter">À prospecter</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Printemps 2027<br><span style="color:#8a8fa3">(dates variables)</span></td>
-          <td data-label="Festival" class="festival">Le Temps des Chimères — Salon du Jeu et de l'Imaginaire</td>
-          <td data-label="Lieu" class="lieu">Le Puy-en-Velay (43)</td>
-          <td data-label="Distance" class="distance">~2h</td>
-          <td data-label="Taille">Petite-moyenne</td>
-          <td data-label="Statut" class="statut">Pas encore de contact <span class="tag prospecter">À prospecter</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Avril 2027<br><span style="color:#8a8fa3">(dates à confirmer)</span></td>
-          <td data-label="Festival" class="festival">Sortons Jouer !</td>
-          <td data-label="Lieu" class="lieu">Montpellier (34)</td>
-          <td data-label="Distance" class="distance">~3h</td>
-          <td data-label="Taille">Moyenne, gratuit, familial</td>
-          <td data-label="Statut" class="statut">Pas encore de contact <span class="tag prospecter">À prospecter</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Début mai 2027<br><span style="color:#8a8fa3">(dates à confirmer)</span></td>
-          <td data-label="Festival" class="festival">Ludinam</td>
-          <td data-label="Lieu" class="lieu">Besançon (25)</td>
-          <td data-label="Distance" class="distance">~2h</td>
-          <td data-label="Taille">Moyenne</td>
-          <td data-label="Statut" class="statut">Déjà participé en 2026 — à reconfirmer pour 2027 <span class="tag attente">À reconfirmer</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">20-23 mai 2027<br><span style="color:#1f7a45; font-weight:600;">(confirmé)</span></td>
-          <td data-label="Festival" class="festival">Ludilac</td>
-          <td data-label="Lieu" class="lieu">Annecy (74) — 9 rue de la Solidarité</td>
-          <td data-label="Distance" class="distance">~1h30-2h</td>
-          <td data-label="Taille">Petite-moyenne (~2500 visiteurs, 700m² d'espace de jeu)</td>
-          <td data-label="Statut" class="statut">Entrée gratuite, festival annuel depuis 2001 — pas encore de contact (forumdesromains.org/ludilac-2026/) <span class="tag prospecter">À prospecter</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Mai 2027<br><span style="color:#8a8fa3">(dates à confirmer)</span></td>
-          <td data-label="Festival" class="festival">OctoGônes</td>
-          <td data-label="Lieu" class="lieu">Chassieu (69)</td>
-          <td data-label="Distance" class="distance">~20-30 min</td>
-          <td data-label="Taille">Grande (équivalent « Gen Con français », en forte croissance)</td>
-          <td data-label="Statut" class="statut">Très proche géographiquement mais taille plus importante à évaluer <span class="tag prospecter">À évaluer</span></td>
-        </tr>
-        <tr>
-          <td data-label="Date">~Mai 2027<br><span style="color:#8a8fa3">(2026 : 8-10 mai, 23e édition ; 2027 à confirmer)</span></td>
-          <td data-label="Festival" class="festival">L'Alchimie du Jeu</td>
-          <td data-label="Lieu" class="lieu">MEETT — Aussonne, agglo. Toulouse (31)</td>
-          <td data-label="Distance" class="distance">~6h</td>
-          <td data-label="Taille">Moyenne, en forte croissance (~29 000 visiteurs projetés 2026)</td>
-          <td data-label="Statut" class="statut">
-            <strong style="color:#a3402c;">Vente directe non autorisée en formule Éditeur</strong> — ventes centralisées via la boutique partenaire Le Passe-Temps.<br>
-            Formule Éditeur : 180&nbsp;€&nbsp;HT avant le 31 mars / 220&nbsp;€&nbsp;HT après + 15&nbsp;€&nbsp;HT d'inscription, table + 6 chaises, 2 boîtes de jeux à fournir.<br>
-            Formule TAPAJ : 220&nbsp;€&nbsp;HT, réservable jusqu'au 15 mars seulement.<br>
+<div class="legend">
+<span class="badge confirme">Confirmé</span>
+<span class="badge contact">En attente / relance</span>
+<span class="badge prospecter">À prospecter</span>
+</div>
+<div class="card">
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Festival</th>
+<th>Lieu</th>
+<th>Distance</th>
+<th>Taille</th>
+<th>Statut</th>
+<th class="avail-col">Vincent</th><th class="avail-col">Florian</th><th class="avail-col">Camille</th></tr>
+</thead>
+<tbody>
+<tr data-festival="Fête L'Art du Jeu (2e édition) — Sam. 5 sept. 2026" data-row-id="row1">
+<td data-label="Date">Sam. 5 sept. 2026</td>
+<td class="festival" data-label="Festival">Fête L'Art du Jeu (2e édition)</td>
+<td class="lieu" data-label="Lieu">Villefranche-sur-Saône (69)</td>
+<td class="distance" data-label="Distance">~30-45 min</td>
+<td data-label="Taille">Petite, communauté ludique régionale</td>
+<td class="statut" data-label="Statut">Invitation reçue (boutique Ludik) — intérêt confirmé en janvier, relance envoyée en juillet, réponse en attente <span class="tag attente">Relance envoyée</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row1" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row1" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row1" type="checkbox"/></label></td></tr>
+<tr data-festival="Festival des Jeux de Vichy — 13-15 sept. 2026 (Salon Pro uniquement — pas de présence au volet public du 19-20 sept.)" data-row-id="row2">
+<td data-label="Date">13-15 sept. 2026<br/><span style="color:#8a8fa3">(Salon Pro uniquement — pas de présence au volet public du 19-20 sept.)</span></td>
+<td class="festival" data-label="Festival">Festival des Jeux de Vichy</td>
+<td class="lieu" data-label="Lieu">Vichy (03)</td>
+<td class="distance" data-label="Distance">~2h30-3h</td>
+<td data-label="Taille">Moyenne-grande (11 000+ visiteurs, 700+ exposants)</td>
+<td class="statut" data-label="Statut">Stand pro réservé et confirmé (présence les 13-14 sept.) — Prix du Public 2024 avec Tape l'étape. Décision de l'équipe : <strong>présence au Salon Pro uniquement, pas au volet grand public.</strong> <span class="tag confirme">Confirmé (Pro)</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row2" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row2" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row2" type="checkbox"/></label></td></tr>
+<tr data-festival="Oyo Game Fest (2e édition) — Sam. 3 oct. 2026" data-row-id="row3">
+<td data-label="Date">Sam. 3 oct. 2026</td>
+<td class="festival" data-label="Festival">Oyo Game Fest (2e édition)</td>
+<td class="lieu" data-label="Lieu">Oyonnax — Centre Culturel Aragon (01)</td>
+<td class="distance" data-label="Distance">~1h</td>
+<td data-label="Taille">Petite, festival local</td>
+<td class="statut" data-label="Statut">Invitation reçue, présence confirmée (1-2 personnes) <span class="tag confirme">Confirmé</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row3" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row3" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row3" type="checkbox"/></label></td></tr>
+<tr data-festival="Festival de Pouilley-les-Vignes (Comt'est, 5e édition) — 24-25 oct. 2026" data-row-id="row4">
+<td data-label="Date">24-25 oct. 2026</td>
+<td class="festival" data-label="Festival">Festival de Pouilley-les-Vignes (Comt'est, 5e édition)</td>
+<td class="lieu" data-label="Lieu">Doubs (25)</td>
+<td class="distance" data-label="Distance">~2h</td>
+<td data-label="Taille">Petite, gratuit, associatif</td>
+<td class="statut" data-label="Statut">Vente directe possible sur place. Demande de donation reçue initialement — à recontacter pour confirmer les modalités d'exposition <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row4" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row4" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row4" type="checkbox"/></label></td></tr>
+<tr data-festival="Fête vos Jeux — 7-8 nov. 2026 (16e édition, confirmé)" data-row-id="row5">
+<td data-label="Date">7-8 nov. 2026<br/><span style="color:#1f7a45; font-weight:600;">(16e édition, confirmé)</span></td>
+<td class="festival" data-label="Festival">Fête vos Jeux</td>
+<td class="lieu" data-label="Lieu">La Roselière, Montbéliard (25)</td>
+<td class="distance" data-label="Distance">~2h30-3h</td>
+<td data-label="Taille">Moyenne (~6000 visiteurs, 250 tables, plusieurs dizaines d'éditeurs)</td>
+<td class="statut" data-label="Statut">Pôle éditeurs : Sébastien Aubert / Rosalie Thomain, contact-editeurs@fete-vos-jeux.fr (conditions/tarifs à demander directement) <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row5" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row5" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row5" type="checkbox"/></label></td></tr>
+<tr data-festival="Salon du Jeu — Dijon — 17 janv. 2027 (1ère édition)" data-row-id="row6">
+<td data-label="Date">17 janv. 2027<br/><span style="color:#1f7a45; font-weight:600;">(1ère édition)</span></td>
+<td class="festival" data-label="Festival">Salon du Jeu — Dijon</td>
+<td class="lieu" data-label="Lieu">Centre Troussel, Sennecey-lès-Dijon (21)</td>
+<td class="distance" data-label="Distance">~2h-2h30 (Lyon)<br/>~1h30 (Mâcon)</td>
+<td data-label="Taille">Nouveau, pas de données de fréquentation (1ère édition)</td>
+<td class="statut" data-label="Statut">Inscription exposants : <a href="https://forms.gle/GH1XrPuhEDt7LZMo9" rel="noopener" target="_blank">forms.gle/GH1XrPuhEDt7LZMo9</a> <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row6" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row6" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row6" type="checkbox"/></label></td></tr>
+<tr data-festival="Salon du Jeu — Vienne — 31 janv. 2027 (2e édition ; 600 visiteurs en 2025)" data-row-id="row7">
+<td data-label="Date">31 janv. 2027<br/><span style="color:#1f7a45; font-weight:600;">(2e édition ; 600 visiteurs en 2025)</span></td>
+<td class="festival" data-label="Festival">Salon du Jeu — Vienne</td>
+<td class="lieu" data-label="Lieu">Salle des fêtes, Vienne (38)</td>
+<td class="distance" data-label="Distance">~35-45 min</td>
+<td data-label="Taille">Petite (600 visiteurs lors de la 1ère édition)</td>
+<td class="statut" data-label="Statut">Inscription exposants : <a href="https://forms.gle/6pWx6CbH6Bh8ue4H9" rel="noopener" target="_blank">forms.gle/6pWx6CbH6Bh8ue4H9</a> <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row7" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row7" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row7" type="checkbox"/></label></td></tr>
+<tr data-festival="Festival du Jeu — À toi de jouer — ~Fin janv./début fév. 2027 (2026 : 31 janv.-1er fév.)" data-row-id="row8">
+<td data-label="Date">~Fin janv./début fév. 2027<br/><span style="color:#8a8fa3">(2026 : 31 janv.-1er fév.)</span></td>
+<td class="festival" data-label="Festival">Festival du Jeu — À toi de jouer</td>
+<td class="lieu" data-label="Lieu">Caluire-et-Cuire (69)</td>
+<td class="distance" data-label="Distance">~10-15 min</td>
+<td data-label="Taille">Petite, organisée par la ludothèque municipale</td>
+<td class="statut" data-label="Statut">On peut vendre sur place — pas encore de contact (ville-caluire.fr) <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row8" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row8" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row8" type="checkbox"/></label></td></tr>
+<tr data-festival="Salon du Jeu — Chalon-sur-Saône — 4 fév. 2027 (1ère édition)" data-row-id="row9">
+<td data-label="Date">4 fév. 2027<br/><span style="color:#1f7a45; font-weight:600;">(1ère édition)</span></td>
+<td class="festival" data-label="Festival">Salon du Jeu — Chalon-sur-Saône</td>
+<td class="lieu" data-label="Lieu">Espace Brassens, Saint-Rémy (71)</td>
+<td class="distance" data-label="Distance">~1h-1h15 (Lyon)<br/>~40-45 min (Mâcon)</td>
+<td data-label="Taille">Nouveau, pas de données de fréquentation (1ère édition)</td>
+<td class="statut" data-label="Statut">Inscription exposants : <a href="https://forms.gle/gSHGii6sCFP5bjBQ8" rel="noopener" target="_blank">forms.gle/gSHGii6sCFP5bjBQ8</a> <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row9" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row9" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row9" type="checkbox"/></label></td></tr>
+<tr data-festival="Salon du Jeu — Oyonnax (Valexpo) — 21 fév. 2027 (2e édition ; 900 visiteurs en 2025)" data-row-id="row10">
+<td data-label="Date">21 fév. 2027<br/><span style="color:#1f7a45; font-weight:600;">(2e édition ; 900 visiteurs en 2025)</span></td>
+<td class="festival" data-label="Festival">Salon du Jeu — Oyonnax (Valexpo)</td>
+<td class="lieu" data-label="Lieu">Valexpo, Oyonnax (01)</td>
+<td class="distance" data-label="Distance">~1h</td>
+<td data-label="Taille">Petite-moyenne (900 visiteurs lors de la 1ère édition)</td>
+<td class="statut" data-label="Statut">Distinct de l'Oyo Game Fest (Centre Culturel Aragon, octobre) — inscription exposants : <a href="https://forms.gle/gXAJ11DfN5Jg7svZ8" rel="noopener" target="_blank">forms.gle/gXAJ11DfN5Jg7svZ8</a> <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row10" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row10" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row10" type="checkbox"/></label></td></tr>
+<tr data-festival="Salon du Jeu — Lyon Nord — 28 fév. 2027 (1ère édition)" data-row-id="row11">
+<td data-label="Date">28 fév. 2027<br/><span style="color:#1f7a45; font-weight:600;">(1ère édition)</span></td>
+<td class="festival" data-label="Festival">Salon du Jeu — Lyon Nord</td>
+<td class="lieu" data-label="Lieu">Espace Jean Vilar, Neuville-sur-Saône (69)</td>
+<td class="distance" data-label="Distance">~20-25 min</td>
+<td data-label="Taille">Nouveau, pas de données de fréquentation (1ère édition)</td>
+<td class="statut" data-label="Statut">Inscription exposants : <a href="https://forms.gle/bhiyZqmfW3muoMur6" rel="noopener" target="_blank">forms.gle/bhiyZqmfW3muoMur6</a> <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row11" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row11" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row11" type="checkbox"/></label></td></tr>
+<tr data-festival="Place aux Jeux (14e édition en 2026) — ~Avril 2027 (2026 : week-end 25-26 avril, festival sur une semaine)" data-row-id="row12">
+<td data-label="Date">~Avril 2027<br/><span style="color:#8a8fa3">(2026 : week-end 25-26 avril, festival sur une semaine)</span></td>
+<td class="festival" data-label="Festival">Place aux Jeux (14e édition en 2026)</td>
+<td class="lieu" data-label="Lieu">Grenoble (38)</td>
+<td class="distance" data-label="Distance">~1h30</td>
+<td data-label="Taille">Moyenne</td>
+<td class="statut" data-label="Statut">Pas encore de contact (placeauxjeux-grenoble.org) <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row12" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row12" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row12" type="checkbox"/></label></td></tr>
+<tr data-festival="Le Temps des Chimères — Salon du Jeu et de l'Imaginaire — ~Printemps 2027 (dates variables)" data-row-id="row13">
+<td data-label="Date">~Printemps 2027<br/><span style="color:#8a8fa3">(dates variables)</span></td>
+<td class="festival" data-label="Festival">Le Temps des Chimères — Salon du Jeu et de l'Imaginaire</td>
+<td class="lieu" data-label="Lieu">Le Puy-en-Velay (43)</td>
+<td class="distance" data-label="Distance">~2h</td>
+<td data-label="Taille">Petite-moyenne</td>
+<td class="statut" data-label="Statut">Pas encore de contact <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row13" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row13" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row13" type="checkbox"/></label></td></tr>
+<tr data-festival="Sortons Jouer ! — ~Avril 2027 (dates à confirmer)" data-row-id="row14">
+<td data-label="Date">~Avril 2027<br/><span style="color:#8a8fa3">(dates à confirmer)</span></td>
+<td class="festival" data-label="Festival">Sortons Jouer !</td>
+<td class="lieu" data-label="Lieu">Montpellier (34)</td>
+<td class="distance" data-label="Distance">~3h</td>
+<td data-label="Taille">Moyenne, gratuit, familial</td>
+<td class="statut" data-label="Statut">Pas encore de contact <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row14" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row14" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row14" type="checkbox"/></label></td></tr>
+<tr data-festival="Ludinam — ~Début mai 2027 (dates à confirmer)" data-row-id="row15">
+<td data-label="Date">~Début mai 2027<br/><span style="color:#8a8fa3">(dates à confirmer)</span></td>
+<td class="festival" data-label="Festival">Ludinam</td>
+<td class="lieu" data-label="Lieu">Besançon (25)</td>
+<td class="distance" data-label="Distance">~2h</td>
+<td data-label="Taille">Moyenne</td>
+<td class="statut" data-label="Statut">Déjà participé en 2026 — à reconfirmer pour 2027 <span class="tag attente">À reconfirmer</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row15" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row15" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row15" type="checkbox"/></label></td></tr>
+<tr data-festival="Ludilac — 20-23 mai 2027 (confirmé)" data-row-id="row16">
+<td data-label="Date">20-23 mai 2027<br/><span style="color:#1f7a45; font-weight:600;">(confirmé)</span></td>
+<td class="festival" data-label="Festival">Ludilac</td>
+<td class="lieu" data-label="Lieu">Annecy (74) — 9 rue de la Solidarité</td>
+<td class="distance" data-label="Distance">~1h30-2h</td>
+<td data-label="Taille">Petite-moyenne (~2500 visiteurs, 700m² d'espace de jeu)</td>
+<td class="statut" data-label="Statut">Entrée gratuite, festival annuel depuis 2001 — pas encore de contact (forumdesromains.org/ludilac-2026/) <span class="tag prospecter">À prospecter</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row16" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row16" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row16" type="checkbox"/></label></td></tr>
+<tr data-festival="OctoGônes — ~Mai 2027 (dates à confirmer)" data-row-id="row17">
+<td data-label="Date">~Mai 2027<br/><span style="color:#8a8fa3">(dates à confirmer)</span></td>
+<td class="festival" data-label="Festival">OctoGônes</td>
+<td class="lieu" data-label="Lieu">Chassieu (69)</td>
+<td class="distance" data-label="Distance">~20-30 min</td>
+<td data-label="Taille">Grande (équivalent « Gen Con français », en forte croissance)</td>
+<td class="statut" data-label="Statut">Très proche géographiquement mais taille plus importante à évaluer <span class="tag prospecter">À évaluer</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row17" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row17" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row17" type="checkbox"/></label></td></tr>
+<tr data-festival="L'Alchimie du Jeu — ~Mai 2027 (2026 : 8-10 mai, 23e édition ; 2027 à confirmer)" data-row-id="row18">
+<td data-label="Date">~Mai 2027<br/><span style="color:#8a8fa3">(2026 : 8-10 mai, 23e édition ; 2027 à confirmer)</span></td>
+<td class="festival" data-label="Festival">L'Alchimie du Jeu</td>
+<td class="lieu" data-label="Lieu">MEETT — Aussonne, agglo. Toulouse (31)</td>
+<td class="distance" data-label="Distance">~6h</td>
+<td data-label="Taille">Moyenne, en forte croissance (~29 000 visiteurs projetés 2026)</td>
+<td class="statut" data-label="Statut">
+<strong style="color:#a3402c;">Vente directe non autorisée en formule Éditeur</strong> — ventes centralisées via la boutique partenaire Le Passe-Temps.<br/>
+            Formule Éditeur : 180 € HT avant le 31 mars / 220 € HT après + 15 € HT d'inscription, table + 6 chaises, 2 boîtes de jeux à fournir.<br/>
+            Formule TAPAJ : 220 € HT, réservable jusqu'au 15 mars seulement.<br/>
             Contact : relations.editeurs@alchimiedujeu.fr
             <span class="tag basse">Pas de vente directe</span>
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Date">Juillet 2027<br><span style="color:#8a8fa3">(2026 : 8-19 juillet)</span></td>
-          <td data-label="Festival" class="festival">FLIP</td>
-          <td data-label="Lieu" class="lieu">Parthenay (79)</td>
-          <td data-label="Distance" class="distance">~5h</td>
-          <td data-label="Taille">Très grande (festival gratuit 12 jours)</td>
-          <td data-label="Statut" class="statut">Réalisé une fois, en 2026 — contact Ronan Bessemoulin (ABI Games) — borne finale, conversion vente plus faible <span class="tag attente">Une seule participation</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+</td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row18" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row18" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row18" type="checkbox"/></label></td></tr>
+<tr data-festival="FLIP — Juillet 2027 (2026 : 8-19 juillet)" data-row-id="row19">
+<td data-label="Date">Juillet 2027<br/><span style="color:#8a8fa3">(2026 : 8-19 juillet)</span></td>
+<td class="festival" data-label="Festival">FLIP</td>
+<td class="lieu" data-label="Lieu">Parthenay (79)</td>
+<td class="distance" data-label="Distance">~5h</td>
+<td data-label="Taille">Très grande (festival gratuit 12 jours)</td>
+<td class="statut" data-label="Statut">Réalisé une fois, en 2026 — contact Ronan Bessemoulin (ABI Games) — borne finale, conversion vente plus faible <span class="tag attente">Une seule participation</span></td>
+<td class="avail-cell" data-label="Vincent"><label class="avail-check"><input class="avail" data-person="Vincent" data-row-id="row19" type="checkbox"/></label></td><td class="avail-cell" data-label="Florian"><label class="avail-check"><input class="avail" data-person="Florian" data-row-id="row19" type="checkbox"/></label></td><td class="avail-cell" data-label="Camille"><label class="avail-check"><input class="avail" data-person="Camille" data-row-id="row19" type="checkbox"/></label></td></tr>
+</tbody>
+</table>
+</div>
+<h2>Disponibilités de l'équipe</h2>
+<div class="card avail-panel" style="padding:20px 24px;">
+<p>Cochez, pour chaque festival, les personnes disponibles (Vincent / Florian / Camille) dans le tableau ci-dessus, puis cliquez sur le bouton ci-dessous pour envoyer un récapitulatif par email à l'équipe. Cette page ne sauvegarde rien automatiquement — le bouton ouvre votre client mail avec la liste des disponibilités cochées, prête à envoyer.</p>
+<button id="save-avail-btn" class="save-btn" type="button">💾 Enregistrer les disponibilités</button>
+<div id="save-status" class="save-status"></div>
+</div>
 
-  <h2>Hors période (pour information)</h2>
-  <div class="card">
-    <table class="hors-periode">
-      <thead>
-        <tr><th>Festival</th><th>Lieu</th><th>Raison</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Festival" class="festival">Festival du Jeu de Dardilly</td>
-          <td data-label="Lieu" class="lieu">Dardilly (69, ~15-20 min de Lyon)</td>
-          <td data-label="Raison" class="statut">Biennal (2020, 2022, 2024, 14 mars 2026) — la prochaine édition tombe en 2028, donc après le FLIP 2027. Petite taille (~1200 visiteurs). À garder en tête pour la prochaine fois mais hors de la période demandée.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h2>Notes</h2>
-  <ul class="notes">
-    <li>Priorité recommandée : Villefranche, Oyonnax, Vichy (déjà engagés/confirmés) puis Montbéliard (dates confirmées, contact éditeurs identifié), Caluire-et-Cuire, Ludinam Besançon, Grenoble et Annecy (dates 2027 confirmées : 20-23 mai).</li>
-    <li><strong>Alchimie du Jeu Toulouse</strong> : à reconsidérer par rapport à l'objectif de vente directe — la formule éditeur standard interdit la vente sur place (vente centralisée via la boutique partenaire Le Passe-Temps). Reste intéressant pour la visibilité/démonstration, mais ne génère pas de vente directe comme les autres festivals de la liste. Coût : ~195-235&nbsp;€ TTC selon la formule et la date de paiement, plus fourniture de boîtes de jeux.</li>
-    <li>Pouilley-les-Vignes : peu orienté vente directe (festival gratuit, demande de donation uniquement), priorité basse.</li>
-    <li>OctoGônes (Chassieu) : proximité maximale avec Lyon, mais devenu un très gros festival (comparable au FLIP en dynamique) — à évaluer si l'objectif reste la vente directe plutôt que la visibilité de masse.</li>
-    <li>Dates 2027 de Ludinam, Alchimie du Jeu, Place aux Jeux, Temps des Chimères, Sortons Jouer et Caluire non encore officiellement annoncées au 12/08/2026 — à vérifier en fin d'année 2026 / début 2027. Les dates 2027 de Fête vos Jeux (Montbéliard, 7-8 nov. 2026) et de Ludilac (Annecy, 20-23 mai 2027) sont en revanche déjà confirmées.</li>
-    <li>Fête vos Jeux (Montbéliard) : conditions et tarifs d'exposition non détaillés en ligne, à demander directement au pôle éditeurs.</li>
-    <li>FIJ Cannes retiré de la sélection : taille jugée trop proche du FLIP par rapport à l'objectif de vente directe.</li>
-    <li>La Tour-de-Peilz (Suisse) et Brussels Games Festival (Belgique) retirés : sélection recentrée sur la France.</li>
-    <li>Festival A L'ASSO 5 (Le Nain Geaune, Landes) retiré de la sélection.</li>
-  </ul>
-
-  <h2>Sources</h2>
-  <ul class="sources">
-    <li>Emails contact@tapeletape.com (Gmail) : boutique-ludik.fr (L'Art du Jeu), billetweb.fr / rb@abigames.fr (Vichy 2026), pierre.leleu@oyonnax.fr (Oyo Game Fest), xavier.dodane.xd@hotmail.fr (Pouilley-les-Vignes), collectif-ludique-bisontin.fr (Ludinam)</li>
-    <li>festivaldesjeuxvichy.fr, jeux-festival.com (FLIP), gusandco.net (calendrier 2026), placeauxjeux-grenoble.org / placegrenet.fr (Place aux Jeux Grenoble), subverti.com/fr/maps/festivals/ludilac-annecy/ (Ludilac Annecy), letempsdeschimeres.com (Le Puy-en-Velay), fete-vos-jeux.com/infos-pratiques/ (Fête vos Jeux Montbéliard), ville-caluire.fr / grainsdesel.com (Caluire-et-Cuire), subverti.com (Dardilly)</li>
-    <li>Document « Modalités de participation 2026 » fourni par l'utilisateur (Association Alchimie du Jeu) pour les tarifs et conditions de vente à Toulouse</li>
-  </ul>
-
+<h2>Hors période (pour information)</h2>
+<div class="card">
+<table class="hors-periode">
+<thead>
+<tr><th>Festival</th><th>Lieu</th><th>Raison</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="festival" data-label="Festival">Festival du Jeu de Dardilly</td>
+<td class="lieu" data-label="Lieu">Dardilly (69, ~15-20 min de Lyon)</td>
+<td class="statut" data-label="Raison">Biennal (2020, 2022, 2024, 14 mars 2026) — la prochaine édition tombe en 2028, donc après le FLIP 2027. Petite taille (~1200 visiteurs). À garder en tête pour la prochaine fois mais hors de la période demandée.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2>Notes</h2>
+<ul class="notes">
+<li>Priorité recommandée : Villefranche, Oyonnax (Oyo Game Fest), Vichy (déjà engagés/confirmés) puis Montbéliard (dates confirmées, contact éditeurs identifié), Caluire-et-Cuire, Ludinam Besançon, Grenoble et Annecy (dates 2027 confirmées : 20-23 mai). Les 5 nouveaux salons de janvier-février 2027 (Dijon/Sennecey, Vienne, Chalon/Saint-Rémy, Oyonnax/Valexpo, Lyon Nord/Neuville) sont tous très proches de Lyon/Mâcon (20 min à 2h30) et à fort potentiel de vente directe malgré leur petite taille ou leur statut de 1ère édition.</li>
+<li>⚠️ Attention à ne pas confondre les deux festivals distincts à Oyonnax : Oyo Game Fest (Centre Culturel Aragon, 3 oct. 2026, 2e édition) et Salon du Jeu — Oyonnax (Valexpo, 21 fév. 2027, 2e édition, 900 visiteurs en 2025). Deux organisations différentes, deux inscriptions séparées.</li>
+<li>Les 5 nouveaux salons (Dijon, Vienne, Chalon, Oyonnax/Valexpo, Lyon Nord) semblent appartenir à un même réseau/circuit de salons locaux (dates rapprochées, formulaires Google Forms similaires pour l'inscription exposants) — pas encore de contact direct établi au-delà des formulaires fournis.</li>
+<li><strong>Alchimie du Jeu Toulouse</strong> : à reconsidérer par rapport à l'objectif de vente directe — la formule éditeur standard interdit la vente sur place (vente centralisée via la boutique partenaire Le Passe-Temps). Reste intéressant pour la visibilité/démonstration, mais ne génère pas de vente directe comme les autres festivals de la liste. Coût : ~195-235 € TTC selon la formule et la date de paiement, plus fourniture de boîtes de jeux.</li>
+<li>Pouilley-les-Vignes : peu orienté vente directe (festival gratuit, demande de donation uniquement), priorité basse.</li>
+<li>OctoGônes (Chassieu) : proximité maximale avec Lyon, mais devenu un très gros festival (comparable au FLIP en dynamique) — à évaluer si l'objectif reste la vente directe plutôt que la visibilité de masse.</li>
+<li>Dates 2027 de Ludinam, Alchimie du Jeu, Place aux Jeux, Temps des Chimères, Sortons Jouer et Caluire non encore officiellement annoncées au 12/08/2026 — à vérifier en fin d'année 2026 / début 2027. Les dates 2027 de Fête vos Jeux (Montbéliard, 7-8 nov. 2026), de Ludilac (Annecy, 20-23 mai 2027) et des 5 nouveaux salons de janvier-février 2027 sont en revanche déjà confirmées par leurs organisateurs.</li>
+<li>Fête vos Jeux (Montbéliard) : conditions et tarifs d'exposition non détaillés en ligne, à demander directement au pôle éditeurs.</li>
+<li>FIJ Cannes retiré de la sélection : taille jugée trop proche du FLIP par rapport à l'objectif de vente directe.</li>
+<li>La Tour-de-Peilz (Suisse) et Brussels Games Festival (Belgique) retirés : sélection recentrée sur la France.</li>
+<li>Festival A L'ASSO 5 (Le Nain Geaune, Landes) retiré de la sélection.</li>
+</ul>
+<h2>Sources</h2>
+<ul class="sources">
+<li>Emails contact@tapeletape.com (Gmail) : boutique-ludik.fr (L'Art du Jeu), billetweb.fr / rb@abigames.fr (Vichy 2026), pierre.leleu@oyonnax.fr (Oyo Game Fest), xavier.dodane.xd@hotmail.fr (Pouilley-les-Vignes), collectif-ludique-bisontin.fr (Ludinam)</li>
+<li>festivaldesjeuxvichy.fr, jeux-festival.com (FLIP), gusandco.net (calendrier 2026), placeauxjeux-grenoble.org / placegrenet.fr (Place aux Jeux Grenoble), subverti.com/fr/maps/festivals/ludilac-annecy/ (Ludilac Annecy), letempsdeschimeres.com (Le Puy-en-Velay), fete-vos-jeux.com/infos-pratiques/ (Fête vos Jeux Montbéliard), ville-caluire.fr / grainsdesel.com (Caluire-et-Cuire), subverti.com (Dardilly)</li>
+<li>Document « Modalités de participation 2026 » fourni par l'utilisateur (Association Alchimie du Jeu) pour les tarifs et conditions de vente à Toulouse</li>
+<li>Informations fournies directement par l'utilisateur pour les 5 salons de janvier-février 2027 (Dijon/Sennecey, Vienne, Chalon/Saint-Rémy, Oyonnax/Valexpo, Lyon Nord/Neuville), y compris les liens Google Forms d'inscription exposants</li>
+</ul>
 </main>
+
+<script>
+document.getElementById('save-avail-btn').addEventListener('click', function () {
+  var checked = document.querySelectorAll('.avail:checked');
+  var statusEl = document.getElementById('save-status');
+
+  if (checked.length === 0) {
+    statusEl.textContent = "Aucune disponibilité cochée pour le moment.";
+    return;
+  }
+
+  var byPerson = {};
+  checked.forEach(function (cb) {
+    var person = cb.getAttribute('data-person');
+    var rowId = cb.getAttribute('data-row-id');
+    var row = document.querySelector('tr[data-row-id="' + rowId + '"]');
+    var festival = row ? row.getAttribute('data-festival') : rowId;
+    if (!byPerson[person]) byPerson[person] = [];
+    byPerson[person].push(festival);
+  });
+
+  var lines = ["Récapitulatif des disponibilités — Programmation festivals Tape l'étape", ""];
+  Object.keys(byPerson).forEach(function (person) {
+    lines.push(person + " :");
+    byPerson[person].forEach(function (f) { lines.push("  - " + f); });
+    lines.push("");
+  });
+  var body = lines.join("\n");
+  var subject = "Disponibilités festivals Tape l'étape";
+  var mailto = "mailto:contact@tapeletape.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+  window.location.href = mailto;
+  statusEl.textContent = "Récapitulatif prêt — votre client mail devrait s'ouvrir avec les disponibilités cochées.";
+});
+</script>
 
 <footer>
   Document de travail — Tape l'étape · Dernière mise à jour : 12 août 2026
 </footer>
-
 </body>
 </html>
